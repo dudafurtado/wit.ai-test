@@ -1,7 +1,7 @@
 const { 
   responseWithSuccess, 
   responseWithError 
-} = require('../helpers/apiResponse');
+} = require('../messages/apiResponse');
 const { getProcess } = require('../service/aiService');
 
 async function processMessageToIa (req, res) {
