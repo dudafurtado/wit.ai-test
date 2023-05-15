@@ -12,7 +12,7 @@ const api = axios.create({
 })
 
 async function getProcess (message, version) {
-  return await api.get(`${url}?v=${version ? version : extraVersion}&q=${message}`)
+  return await api.get(`?v=${version ? version : extraVersion}&q=${message}`)
 }
 
 module.exports = {
