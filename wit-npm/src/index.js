@@ -7,6 +7,6 @@ const { getParamsIa } = require('./controllers/aiController');
 
 app.use(express.json());
 
-app.get('/wit-npm', getParamsIa);
+app.post('/wit-npm', getParamsIa);
 
-app.listen(process.env.PORT || 4000);
+app.listen(process.env.PORT);

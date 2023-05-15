@@ -4,11 +4,12 @@ const {
   responseWithError
 } = require('../messages/apiResponse');
 
-function getParamsIa (request, response) {
+async function getParamsIa (request, response) {
   try {
-    const { message } = request.query;
+    const { message } = request.body;
+    console.log(message)
 
-    const responseIa = processUserData(message);
+    const responseIa = await processUserData(message);
   
     return responseWithSuccess(response, responseIa);
   } catch (error) {

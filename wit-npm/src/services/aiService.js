@@ -15,9 +15,9 @@ async function processUserData (message) {
     logger: new log.Logger(log.DEBUG),
   });
 
-  const aiResponse = client.message(message)
+  const aiResponse = await client.message(message)
 
-  return await aiResponse
+  return aiResponse
 }
 
 module.exports = {
